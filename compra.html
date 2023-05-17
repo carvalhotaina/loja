@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylecomp.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="top">
+
+        <!-- cabeçalho da loja onde fica o nome da loja e sua apresentação-->
+
+        <H1>🌸Taimilie's Fashion House</H1>
+        <h2>OTIMA ESCOLHA!</h2>
+        <h3> ♥obrigado por comprar em nossa loja♥</h3>
+    </div>
+    <div class="comp">
+
+        <!-- classe compra onde ficara no canto esquerdo mostrando as informações do pedido -->
+
+        <h5>sua compra</h5>
+        <form id="camisa-form">
+            <!--um form para conseguir mudar a cor da camiseta e inserir a cor e quantidade desejada depois calcular o preço-->
+
+            <img id="camisa-imagem" class="camisa-imagem" src="midia/red-shirt.png">
+            <br>
+
+            <!-- referenciei cada cor para ficar mais facil no js com uma função de mudar a imagem referente a cor escolhida -->
+            <label for="cor-red">
+                <input type="radio" id="cor-red" name="cor" value="red" onclick="mudaImagem('red')"> 🔴
+            </label>
+
+            <label for="cor-blue">
+                <input type="radio" id="cor-blue" name="cor" value="blue" onclick="mudaImagem('blue')"> 🔵
+            </label>
+
+            <label for="cor-green">
+                <input type="radio" id="cor-green" name="cor" value="green" onclick="mudaImagem('green') "> 🟢
+            </label>
+            <br><br>
+
+            <h6>descrição</h6>
+            <h6>
+                Aproveite o estilo e o conforto desta camiseta moderna e versátil. Feita com materiais de alta
+                qualidade,
+                ela proporciona um ajuste perfeito e uma sensação suave na pele. Com uma variedade de cores vibrantes
+                para
+                escolher, você pode expressar seu estilo único
+            </h6>
+            
+            <!-- range e usado para criar uma barra, neste caso com o tamanho desejado de camiseta, e uma função updatetamanho para se atualizar conforme o usuario use a barra de tamanhos-->
+            <label for="tamanho-range">Tamanho (26-50):</label>
+            <input type="range" id="tamanho-range" min="26" max="50" oninput="updateTamanho()">
+            <span id="tamanho-valor"></span>
+            <br><br>
+
+            <!--coloco uma caixa com o tipo numero para o usuario informar a quantidade de camisetas desejada que tem que ser no minimo uma, e uma função para calcular o preço em js-->
+            <label for="quantidade-input">Quantidade:</label>
+            <input type="number" id="quantidade-input" min="1" oninput="updatePreco()">
+            <br><br>
+            <!--depois de calcular o preço na função coloco um SPAN para mostrar seu desconto caso seja o caso ou o valor total da compra-->
+            <label for="preco">Preço:</label>
+            <span id="preco"></span>
+            <br><br>
+
+
+        </form>
+
+    </div>
+
+    <div class="dados-comp">
+        <!-- clas do lado direito com os dados do comprador e seu cartao-->
+        <h3>DADOS PESSOAIS</h3>
+        <h3> CARTÃO DE CRÉDITO</h3>
+
+        <form>
+
+            <!--uso label para fazer as perguntas e o required para tornar os campos obrigatorios e os types corretos para cada um-->
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="numero">Número cvv:</label>
+            <input type="text" id="numero" name="numero" required>
+            <br><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
+
+            <label for="bandeira">bandeira</label>
+            <input type="text" id="bandeira" name="bandeira" required placeholder="Elo">
+            <br><br>
+
+            <!-- no caso do cpf buscamos documentação da internet para lidar com  o required pattern que voce consegue pedir um tipo exato de informação-->
+            <label for="cpf">CPF:</label>
+            <input type="number" id="cpf" name="cpf" required placeholder="000.000.000-00" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
+                title="Digite um CPF válido (ex: 123.456.789-10)">
+             
+            <label for="Validade">Validade:</label>
+            <input type="date" id="Validade" name="Validade" required>
+            <br><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+<script src="js/javacomp.js"></script>
+
+</html>
