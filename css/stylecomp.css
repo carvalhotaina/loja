@@ -1,0 +1,176 @@
+/*Estilo para background*/
+body {
+    background-color: #F2ECE8;
+    background-image: linear-gradient(to bottom right, #F2ECE8, #D7D0C9);
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para o cabeçalho da loja */
+
+.top {
+    text-align: left;
+    background-color: #E9DAC3;
+    padding: 20px;
+}
+
+.top h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #603F20;
+}
+
+.top h2, .top h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: hsl(40, 22%, 39%);
+}
+
+/* Estilos para a seção de compra */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.comp {
+    flex: 1;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comp .camisa-imagem {
+    width: 500px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.comp form {
+    display: flex;
+    flex-direction: column;
+}
+
+.comp h5 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #603F20;
+    margin-bottom: 10px;
+}
+
+.comp h6 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #8C7853;
+    margin-bottom: 20px;
+}
+
+.comp label {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #8C7853;
+}
+
+.comp input[type="radio"] {
+    margin-right: 5px;
+}
+
+.comp input[type="range"] {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #8C7853;
+}
+.comp input[type="range"]::-webkit-slider-runnable-track {
+    background-color: #8C7853;
+    height: 5px;
+    border-radius: 10px;
+}
+
+
+
+.comp input[type="number"] {
+    width: 100px;
+    padding: 5px;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #8C7853;
+    background-color: #F7E9D8;
+    border: none;
+    border-radius: 5px;
+}
+
+.comp input[type="number"]:focus {
+    outline: none;
+    box-shadow: 0 0 3px #603F20;
+}
+
+.comp #preco {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #603F20;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+/* Estilos para a seção de dados do comprador */
+.dados-comp {
+    flex: 1;
+    margin-left: 20px;
+}
+/*dados e cartao*/
+.dados-comp h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #603F20;
+}
+/*forms*/
+.dados-comp form {
+    display: flex;
+    flex-direction: column;
+}
+
+ /*labels*/
+.dados-comp label {
+    margin-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #8C7853;
+}
+
+ /*espaços arrumados*/
+.dados-comp input[type="text"],
+.dados-comp input[type="email"],
+.dados-comp input[type="number"],
+.dados-comp input[type="date"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #8C7853;
+    background-color: #F7E9D8;
+    border: none;
+    border-radius: 10px;
+}
+/*botao*/
+.dados-comp button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #603F20;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+/*fica mais escuro*/
+.dados-comp button[type="submit"]:hover {
+    background-color: #3b2d12;
+}
